@@ -1,0 +1,30 @@
+server:
+  contextPath: /spoiler
+  port: 9000
+spring:
+  profiles:
+    active: production
+---
+spring:
+  profiles: dev
+---
+spring:
+  profiles: test
+---
+#db configuration
+spring:
+  profiles: production
+  datasource:
+    url: jdbc:postgresql://localhost:5432/spoilerdb
+    username: spoiler
+    password: admin
+    testWhileIdle: true
+    validationQuery: SELECT 1
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
