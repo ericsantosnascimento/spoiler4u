@@ -40,7 +40,6 @@ public class SpoilerController {
      *
      * @param id
      */
-    @CrossOrigin(origins = {"http://spoiler4u.com","http://localhost:8080","http://ec2-52-90-187-212.compute-1.amazonaws.com:9000"})
     @RequestMapping(value = "{id}", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public Spoiler listOne(@PathVariable long id) {
