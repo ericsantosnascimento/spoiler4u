@@ -1,3 +1,3 @@
 # spoiler4u
 
-Spoiler service service.
+Spoiler service to troll the people.
